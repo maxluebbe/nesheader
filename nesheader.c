@@ -51,16 +51,13 @@ void writeHeader(prgrom_kb, chrrom_kb, prgram_kb, mapper, four_screen, trainer_p
 
     // Byte 4: PRGROM size divided by 16k.
     int prgrom_div_16k = prgrom_kb / 16;
-    //prgrom_div_16k = 0x08;
     putchar(prgrom_div_16k);
 
     // Byte 5: CHRROM size divided by 8k.
     int chrrom_div_8k = chrrom_kb / 8;
-    //chrrom_div_8k = 0x10;
     putchar(chrrom_div_8k);
 
     // Byte 6: Flag 6 values.
-    //putchar(0x12);
     putchar(flag6(mapper,four_screen,trainer_present,battery_backed,vertical_mirror));
 
     // Byte 7: Flag 7 values.
@@ -103,8 +100,7 @@ int main (int argc, char *argv[]) {
     int battery_backed = 0;
     int vertical_mirror = 1;
 
-//TODO: Add -o file output.
-//$ ./nesheader -p128 -c128 -r0 -m1 -v > somegame.header
+    //TODO: Add -o file output.
     int rv = 0;
 	while((rv = getopt(argc, argv, FLAG_FORMAT)) != -1) {
         switch(rv) {
