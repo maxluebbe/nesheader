@@ -9,9 +9,6 @@
  * 
  * Make a usable rom:
  *   $ cat somegame.header somegame.bin > somegame.nes
- * 
- * Max Luebbe - <max.luebbe@gmail.com>
- * November 2018
  */
 
 #include <stdio.h>
